@@ -31,7 +31,7 @@ data: Array(20)
 
 Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe. Also, define the the React components and the architectural design of your app.
 
-- [add link to your wireframes]()
+- [Desktop and mobile wireframes](https://imgur.com/a/hCMB9Iz)
 - [add link to your react architecture]()
 
 
@@ -64,9 +64,11 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| Adding Form | H | 2hrs|  |  |
+| Working with API | H | 3hrs|  |  |
+| Styling/Responsive Design | H | 5hrs|  |  |
+| Mobile first | H | 5hrs|  |  |
+| Total | H | 15hrs|  |  |
 
 ## Additional Libraries
  Use this section to list all supporting libraries and thier role in the project such as Axios, ReactStrap, D3, etc. 
