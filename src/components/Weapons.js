@@ -29,10 +29,28 @@ const Weapons = () => {
         );
     });
 
+    const handleChange = (event) => {
+        setInput(event.target.value);
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        let wepList = [...weapons];
+        let filteredWeapons = wepList.filter((weapon) => {
+            return weapon !== weapon.displayName;
+        });
+        setWeapons(filteredWeapons);
+    };
+
     return (
         <div>
-            <form>
-                <input type="text" value={input} placeholder="Weapon name" />
+            <form onSubmit={handleSubmit}>
+                <input
+                    onChange={handleChange}
+                    type="text"
+                    value={input}
+                    placeholder="Weapon name"
+                />
                 <input type="submit" value="submit" />
             </form>
             <ul>{weaponList}</ul>
