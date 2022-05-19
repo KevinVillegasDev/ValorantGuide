@@ -35,6 +35,24 @@ li {
 img {
   max-width: 256px;
   max-height: 256px;
+  padding-top: 20px;
+}
+.abouttext {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  font-size: 30px;
+  border: 1px solid black;
+  margin: 1vw;
+  background-color: rgba(128, 128, 128, 0.326);
+}
+.aboutlink {
+  font-size: 30px;
+}
+.abouth1 {
+  padding-top: 20px;
+}
+.wep {
+  max-height: 100px;
 }
 
 h1 {
@@ -59,7 +77,10 @@ nav {
   margin: 30px;
   display: flex;
   justify-content: space-evenly;
+  font-size: 30px;
 }
+
+
 
 a {
   color: white;

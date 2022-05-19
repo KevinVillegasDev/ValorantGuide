@@ -1,8 +1,8 @@
 const About = () => {
     return (
         <div className="about">
-            <h2>What is Valorant?</h2>
-            <p>
+            <h1 className="abouth1">What is Valorant?</h1>
+            <p className="abouttext">
                 It's a 5v5 multiplayer first-person shooter (FPS) where one team
                 attacks and the other defends. The main game mode, Search and
                 Destroy, is very similar to CS:GO. The attacking team's goal is
@@ -11,7 +11,10 @@ const About = () => {
                 at the beginning of the game that has unique abilities and plays
                 a specific role in the game.
             </p>
-            <a href="https://www.youtube.com/watch?v=umWJCOh_oE4&ab_channel=ProGuidesValorantTips%2CTricksandGuides">
+            <a
+                className="aboutlink"
+                href="https://www.youtube.com/watch?v=umWJCOh_oE4&ab_channel=ProGuidesValorantTips%2CTricksandGuides"
+            >
                 Valorant explained!
             </a>
         </div>

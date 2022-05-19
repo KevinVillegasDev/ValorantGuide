@@ -25,6 +25,7 @@ const Weapons = (props) => {
         return (
             <li key={key}>
                 <img
+                    className="wep"
                     src={weapon.displayIcon}
                     alt="weap"
                     onClick={props.toggleClick}
