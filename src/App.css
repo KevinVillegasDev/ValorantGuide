@@ -40,3 +40,7 @@
 li {
   text-decoration: none;
 }
+img {
+  max-width: 256px;
+  max-height: 256px;
+}

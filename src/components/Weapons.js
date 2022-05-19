@@ -38,11 +38,15 @@ const Weapons = () => {
         event.preventDefault();
         let wepList = [...weapons];
         let filteredWeapons = wepList.filter((weapon) => {
-            return input === weapon.displayName;
+            return input.toLowerCase() === weapon.displayName.toLowerCase();
         });
         console.log(wepList);
         setWeapons(filteredWeapons);
         setInput("");
+    };
+
+    const clear = () => {
+        weaponReq();
     };
 
     return (
@@ -55,6 +59,7 @@ const Weapons = () => {
                     placeholder="Weapon name"
                 />
                 <input type="submit" value="submit" />
+                <button onClick={clear}>Clear</button>
             </form>
             <ul>{weaponList}</ul>
         </div>

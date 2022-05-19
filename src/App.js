@@ -6,9 +6,11 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import Agents from "./components/Agents";
 import Weapons from "./components/Weapons";
+import About from "./components/About";
 
 const App = () => {
     const [agents, setAgents] = useState([]);
+    const [input, setInput] = useState("");
 
     useEffect(() => {
         agentCall();
@@ -24,6 +26,24 @@ const App = () => {
         } catch (error) {
             console.log(error);
         }
+    };
+
+    const handleChange = (event) => {
+        setInput(event.target.value);
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        let agentList = [...agents];
+        let filteredAgents = agentList.filter((agent) => {
+            return input.toLowerCase() === agent.displayName.toLowerCase();
+        });
+        setAgents(filteredAgents);
+        setInput("");
+    };
+
+    const clear = () => {
+        agentCall();
     };
 
     const agentList = agents.map((agent, key) => {
@@ -50,9 +70,18 @@ const App = () => {
             <main>
                 <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
                     <Route
                         path="/agents"
-                        element={<Agents agents={agentList} />}
+                        element={
+                            <Agents
+                                agents={agentList}
+                                handleChange={handleChange}
+                                handleSubmit={handleSubmit}
+                                input={input}
+                                clear={clear}
+                            />
+                        }
                     />
                     <Route path="/weapons" element={<Weapons />} />
                 </Routes>
