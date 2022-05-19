@@ -1,46 +1,44 @@
+.agents {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows:  repeat(19, 1fr);
+  list-style: none;
+  
+}
+
+.weapons {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows:  repeat(18, 1fr);
+  list-style: none
+}
+html {
+  background-image: url("/src/components/3037905.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 li {
-  text-decoration: none;
+  border: 1px solid black;
+  margin: 1vw;
+  background-color: rgba(128, 128, 128, 0.326);
 }
+
 img {
   max-width: 256px;
   max-height: 256px;
+}
+
+@media (min-width: 768px) {
+  .agents {
+    grid-template-rows: repeat(5, 1fr) ;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .weapons {
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr) ;
+  }
 }

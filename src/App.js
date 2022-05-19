@@ -11,6 +11,7 @@ import About from "./components/About";
 const App = () => {
     const [agents, setAgents] = useState([]);
     const [input, setInput] = useState("");
+    const [toggleInfo, setToggleInfo] = useState("none");
 
     useEffect(() => {
         agentCall();
@@ -46,20 +47,35 @@ const App = () => {
         agentCall();
     };
 
+    const toggleClick = () => {
+        if (toggleInfo === "none") {
+            setToggleInfo("unset");
+        } else if (toggleInfo === "unset") {
+            setToggleInfo("none");
+        }
+    };
+
     const agentList = agents.map((agent, key) => {
         return (
             <li key={key}>
-                <img src={agent.displayIcon} alt="agent" />
-                <p>Name: {agent.displayName}</p>
-                <p>{agent.description}</p>
-                <p>Role: {agent.role.displayName}</p>
-                <p></p>
-                <p>
-                    Abilities: {agent.abilities[0].displayName}{" "}
-                    {agent.abilities[1].displayName}{" "}
-                    {agent.abilities[2].displayName}{" "}
-                    {agent.abilities[3].displayName}
-                </p>
+                <img
+                    id={agent.displayName}
+                    src={agent.displayIcon}
+                    alt="agent"
+                    onClick={toggleClick}
+                />
+                <div style={{ display: toggleInfo }}>
+                    <p>Name: {agent.displayName}</p>
+                    <p>{agent.description}</p>
+                    <p>Role: {agent.role.displayName}</p>
+
+                    <p>
+                        Abilities: {agent.abilities[0].displayName}{" "}
+                        {agent.abilities[1].displayName}{" "}
+                        {agent.abilities[2].displayName}{" "}
+                        {agent.abilities[3].displayName}
+                    </p>
+                </div>
             </li>
         );
     });
@@ -83,7 +99,15 @@ const App = () => {
                             />
                         }
                     />
-                    <Route path="/weapons" element={<Weapons />} />
+                    <Route
+                        path="/weapons"
+                        element={
+                            <Weapons
+                                toggleInfo={toggleInfo}
+                                toggleClick={toggleClick}
+                            />
+                        }
+                    />
                 </Routes>
             </main>
         </div>

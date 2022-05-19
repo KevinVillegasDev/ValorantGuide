@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-const Weapons = () => {
+const Weapons = (props) => {
     const [input, setInput] = useState("");
     const [weapons, setWeapons] = useState([]);
 
@@ -24,8 +24,32 @@ const Weapons = () => {
     const weaponList = weapons.map((weapon, key) => {
         return (
             <li key={key}>
-                <img src={weapon.displayIcon} alt="weap" />
-                <p>Name: {weapon.displayName}</p>
+                <img
+                    src={weapon.displayIcon}
+                    alt="weap"
+                    onClick={props.toggleClick}
+                />
+                <div style={{ display: props.toggleInfo }}>
+                    <p>Name: {weapon.displayName}</p>
+                    {weapon.weaponStats && (
+                        <p>
+                            Fire Rate: {weapon.weaponStats.fireRate}{" "}
+                            rounds/second
+                        </p>
+                    )}
+                    {weapon.weaponStats && (
+                        <p>
+                            Magazine Size: {weapon.weaponStats.magazineSize}{" "}
+                            rounds
+                        </p>
+                    )}
+                    {weapon.weaponStats && (
+                        <p>
+                            Reload Time: {weapon.weaponStats.reloadTimeSeconds}{" "}
+                            seconds
+                        </p>
+                    )}
+                </div>
             </li>
         );
     });
@@ -61,7 +85,7 @@ const Weapons = () => {
                 <input type="submit" value="submit" />
                 <button onClick={clear}>Clear</button>
             </form>
-            <ul>{weaponList}</ul>
+            <ul className="weapons">{weaponList}</ul>
         </div>
     );
 };

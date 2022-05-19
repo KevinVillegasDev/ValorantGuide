@@ -11,7 +11,7 @@ const Agents = (props) => {
                 <input type="submit" value="submit" />
                 <button onClick={props.clear}>Clear</button>
             </form>
-            <ul>{props.agents}</ul>
+            <ul className="agents">{props.agents}</ul>
         </div>
     );
 };
