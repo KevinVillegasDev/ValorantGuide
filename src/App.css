@@ -23,7 +23,6 @@ html {
 
 .App {
   text-align: center;
-  
 }
 
 li {
@@ -52,8 +51,14 @@ h3 {
 
 .about {
   color: white;
-  padding-left: 350px;
-  padding-right: 350px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+nav {
+  margin: 30px;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 a {
@@ -72,6 +77,11 @@ ul {
   .weapons {
     grid-template-rows: repeat(5, 1fr);
     grid-template-columns: repeat(4, 1fr) ;
+  }
+  .about {
+  color: white;
+  padding-left: 350px;
+  padding-right: 350px;
   }
   
 }
