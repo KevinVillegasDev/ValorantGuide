@@ -12,24 +12,56 @@
   grid-template-rows:  repeat(18, 1fr);
   list-style: none
 }
+
 html {
   background-image: url("/src/components/3037905.webp");
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+
 }
+
 .App {
   text-align: center;
+  
 }
 
 li {
   border: 1px solid black;
   margin: 1vw;
   background-color: rgba(128, 128, 128, 0.326);
+  color: white;
 }
 
 img {
   max-width: 256px;
   max-height: 256px;
+}
+
+h1 {
+  color: whitesmoke;
+}
+
+h2 {
+  color: whitesmoke;
+}
+
+h3 {
+  color: white;
+}
+
+.about {
+  color: white;
+  padding-left: 350px;
+  padding-right: 350px;
+}
+
+a {
+  color: white;
+}
+
+ul {
+  padding: unset;
 }
 
 @media (min-width: 768px) {
@@ -41,4 +73,5 @@ img {
     grid-template-rows: repeat(5, 1fr);
     grid-template-columns: repeat(4, 1fr) ;
   }
+  
 }
