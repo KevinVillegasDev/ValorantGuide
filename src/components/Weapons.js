@@ -75,6 +75,7 @@ const Weapons = (props) => {
 
     return (
         <div>
+            <h2>Search for Weapon</h2>
             <form onSubmit={handleSubmit}>
                 <input
                     onChange={handleChange}

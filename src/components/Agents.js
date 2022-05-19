@@ -1,6 +1,7 @@
 const Agents = (props) => {
     return (
         <div>
+            <h2>Search for Agent</h2>
             <form onSubmit={props.handleSubmit}>
                 <input
                     onChange={props.handleChange}
