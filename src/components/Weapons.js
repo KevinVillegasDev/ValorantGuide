@@ -25,6 +25,7 @@ const Weapons = () => {
         return (
             <li key={key}>
                 <img src={weapon.displayIcon} alt="weap" />
+                <p>Name: {weapon.displayName}</p>
             </li>
         );
     });
@@ -37,9 +38,11 @@ const Weapons = () => {
         event.preventDefault();
         let wepList = [...weapons];
         let filteredWeapons = wepList.filter((weapon) => {
-            return weapon !== weapon.displayName;
+            return input === weapon.displayName;
         });
+        console.log(wepList);
         setWeapons(filteredWeapons);
+        setInput("");
     };
 
     return (

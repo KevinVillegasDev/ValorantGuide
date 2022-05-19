@@ -31,7 +31,8 @@ const App = () => {
             <li key={key}>
                 <img src={agent.displayIcon} alt="agent" />
                 <p>Name: {agent.displayName}</p>
-                <p>Role: {agent.role.description}</p>
+                <p>{agent.description}</p>
+                <p>Role: {agent.role.displayName}</p>
                 <p></p>
                 <p>
                     Abilities: {agent.abilities[0].displayName}{" "}
