@@ -67,11 +67,11 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 2hrs|  |  |
-| Working with API | H | 3hrs|  |  |
-| Styling/Responsive Design | H | 5hrs|  |  |
-| Mobile first | H | 5hrs|  |  |
-| Total | H | 15hrs|  |  |
+| Adding Form | H | 2hrs| 1hr | 1hr |
+| Working with API | H | 3hrs| 6hr| 6hr |
+| Styling/Responsive Design | H | 5hrs| 2hr | 2hr |
+| Mobile first | H | 5hrs| 2hr | 2hr |
+| Total | H | 15hrs| 11hr | 11hr |
 
 ## Additional Libraries
 
