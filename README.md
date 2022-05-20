@@ -2,12 +2,12 @@
 
 ## Project Links
 
-- [add your github repo link]()
+- [Github Repo](https://github.com/KevinVillegasDev/Project2)
 - [add your deployment link]()
 
 ## Project Description
 
-Valorant themed website that lets you check weapon skins and get info on angents.
+Valorant themed website that lets you check weapon stats and get info on agents.
 
 ## API
 
@@ -56,8 +56,11 @@ Based on the initial logic defined in the previous sections try and breakdown th
 | Component | Description | 
 | --- | :---: |  
 | App | This will make the initial data pull and include React Router| 
-| Header | This will render the header include the nav | 
-| Footer | This will render the header include the nav | 
+| Navbar | This will render the header include the nav | 
+| About | This will render the about component and a small snippet of info | 
+| Home | This will render the home component |
+| Agents | This will render all valorant agents and their information |
+| Weapons | This will render all valorant weapons and their stats |
 
 
 Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Also, put a gif at the top of your Readme before you pitch, and you'll get a panda prize.
@@ -71,7 +74,6 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Total | H | 15hrs|  |  |
 
 ## Additional Libraries
- Use this section to list all supporting libraries and thier role in the project such as Axios, ReactStrap, D3, etc. 
 
 Using axios to make api calls
 
