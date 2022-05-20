@@ -2,7 +2,7 @@
 
 ## Project Links
 
-- [add your github repo link]()
+- [Github Repo](https://github.com/KevinVillegasDev/Project2)
 - [add your deployment link]()
 
 ## Project Description
