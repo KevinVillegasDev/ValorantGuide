@@ -74,10 +74,10 @@ h3 {
 }
 
 nav {
-  margin: 30px;
+  margin: 20px;
   display: flex;
   justify-content: space-evenly;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 
@@ -104,5 +104,10 @@ ul {
   padding-left: 350px;
   padding-right: 350px;
   }
-  
+  nav {
+    margin: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 30px;
+  }
 }
