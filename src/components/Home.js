@@ -1,7 +1,7 @@
 const Home = () => {
     return (
         <div>
-            <h1>One stop shop for all your Valorant info</h1>
+            <h1>Beginner Guide to Valorant</h1>
         </div>
     );
 };
